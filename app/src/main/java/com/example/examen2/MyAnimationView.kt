@@ -9,6 +9,7 @@ import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
 import android.content.Context
 import android.graphics.Canvas
+import android.graphics.Interpolator
 import android.graphics.RadialGradient
 import android.graphics.Shader
 import android.graphics.drawable.ShapeDrawable
@@ -51,7 +52,6 @@ class MyAnimationView(context: Context?) : View(context) {
         val duration = 1000
         val bounceAnim: ValueAnimator = ObjectAnimator.ofFloat(newBall, "y", startY, endY)
         bounceAnim.setDuration(duration.toLong())
-        bounceAnim.interpolator = AccelerateInterpolator()
 
         val squashAnim2: ValueAnimator = ObjectAnimator.ofFloat(
             newBall,
