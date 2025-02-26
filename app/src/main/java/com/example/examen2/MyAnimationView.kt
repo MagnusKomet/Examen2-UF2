@@ -49,8 +49,7 @@ class MyAnimationView(context: Context?) : View(context) {
         val startY: Float = height - 50f
         val endY = height - height + 50f
         val h = height.toFloat()
-        val eventY = event.y
-        val duration = (5000 * ((h - eventY) / h)).toInt()
+        val duration = 1000
         val bounceAnim: ValueAnimator = ObjectAnimator.ofFloat(newBall, "y", startY, endY)
         bounceAnim.setDuration(duration.toLong())
         bounceAnim.interpolator = AccelerateInterpolator()
