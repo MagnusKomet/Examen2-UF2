@@ -48,7 +48,6 @@ class MyAnimationView(context: Context?) : View(context) {
         // Bouncing animation with squash and stretch
         val startY: Float = height - 50f
         val endY = height - height + 50f
-        val h = height.toFloat()
         val duration = 1000
         val bounceAnim: ValueAnimator = ObjectAnimator.ofFloat(newBall, "y", startY, endY)
         bounceAnim.setDuration(duration.toLong())
